@@ -115,7 +115,7 @@ client.on("message", (topic, msg) => {
 });
 EOF
 node index.mjs
-
+```
 ### 3) (Optional) Hello, Mesh (Python)
 
 python -m pip install paho-mqtt
