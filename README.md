@@ -117,7 +117,7 @@ EOF
 node index.mjs
 ```
 ### 3) (Optional) Hello, Mesh (Python)
-
+```python
 python -m pip install paho-mqtt
 python - <<'PY'
 import json, time, os
@@ -136,7 +136,7 @@ while True:
     payload = {"id": device_id, "ts": int(time.time()*1000), "zone": "lab-north", "temp": 23.6}
     c.publish("irl/presence", json.dumps(payload))
     time.sleep(5)
-PY
+```
 
 This simulates two devices sharing **presence summaries**. Add another script that fuses context and publishes a decision on `irl/decisions/...` to see the pattern end-to-end.
 
